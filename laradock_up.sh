@@ -1,5 +1,5 @@
 #!/bin/sh
-cp -r laradock_env/ laradock
+cp -a laradock_env/. laradock
 pushd laradock
 docker-compose up -d apache2 mysql phpmyadmin workspace
 docker-compose exec -u laradock workspace composer create-project --prefer-dist laravel/laravel .
